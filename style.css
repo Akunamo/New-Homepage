@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-radish: rgb(232, 60, 46);
+    --clr-yellow: rgb(228, 148, 49);
+    --clr-dark-blue: rgb(48, 42, 75);
+    --clr-blue: rgb(69, 84, 225);
+
+}
+
+body,
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    /* temporary */
+    padding-bottom: 5rem;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ------------------------ */
+/* ---    Page Styles   --- */
+/* ------------------------ */
+
+main {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 90%) minmax(1rem, 1fr);
+    grid-template-areas: 
+    '... main-content ...'
+    '... sidebar ...'
+    '... one ...'
+    '... two ...'
+    '... three ...';
+}
+
+
+/* --------------------- */
+/* --- Main-Content  --- */
+/* --------------------- */
+
+.main-content {
+    grid-area: main-content;
+}
+
+.title {
+    display: grid;
+    background-color: #e83c2e;
+}
+
+.title h1 {
+    margin-block: 2rem;
+    color: rgb(10, 10, 119);
+}
+
+.paragraph {
+    display: flex;
+    background-color: var(--clr-yellow);
+    /* width: 250px; */
+    max-width: 100%;
+    /* padding: 1rem; */
+}
+
+.paragraph p {
+    margin-block: 2rem;
+}
+
+.button {
+    background-color: var(--clr-blue);
+    width: 70px;
+    height: 2rem;
+}
+
+
+/* ----    Sidebar   ---- */
+
+aside {
+    grid-area: sidebar;
+    background-color: var(--clr-dark-blue);
+    min-height: 300px;
+}
+
+/* --- articles --- */
+
+.one {grid-area: one;}
+.two {grid-area: two;}
+.three {grid-area: three;}
+
+article {
+    display: flex;
+    background-color: var(--clr-blue);
+}
+
+article .img-container {
+    width: 30%;
+}
+
+
+
+
+@media (min-width: 600px) {
+    main {
+        /* 0 or auto */
+        grid-template-columns: minmax(1rem, 1fr) repeat(3, minmax(auto,18rem)) minmax(1rem, 1fr);
+        grid-template-areas: 
+        '... main-content main-content sidebar ...'
+        '... one two three ...';
+        gap: .8rem;
+    }
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: .5rem;
+    }
+
+    picture {
+        grid-column: span 2;
+    }
+
+    .title {
+        grid-row: span 2;
+    }
+}
