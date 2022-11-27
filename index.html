@@ -8,6 +8,7 @@
     <title>Frontend Mentor | News homepage</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,12 +16,12 @@
     <header>
         <nav>
             <img class="logo" src="./assets/images/logo.svg" alt="">
-            <ul class="navigation">
-                <li>Home</li>
-                <li>New</li>
-                <li>Popular</li>
-                <li>Trending</li>
-                <li>Categories</li>
+            <button class="toggle-nav" aria-controls="navigation" aria-expanded="false"></button>
+            <ul class="navigation" id="navigation" aria-expanded="false">
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
             </ul>
         </nav>
     </header>

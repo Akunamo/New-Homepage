@@ -42,6 +42,7 @@ body {
     padding-bottom: 5rem;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
+    background-color: var(--Off-white);
 }
 
 li {
@@ -66,7 +67,6 @@ p {
 
 .logo {
     grid-column: 2;
-    grid-row: 1;
 }
 
 nav {
@@ -74,15 +74,36 @@ nav {
     grid-template-columns: minmax(0, 1fr) minmax(auto, 95%) minmax(0, 1fr);
     align-items: center;
     margin-block: clamp(1rem, 1rem + 3vw, 4rem);
+    position: relative;
+}
+
+nav>* {
+    grid-row: 1;
 }
 
 .navigation {
     grid-column: 2 / -2;
-    grid-row: 1;
     justify-self: end;
     padding: 0;
     display: flex;
     gap: 2.6rem;
+}
+
+.navigation a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    color: var(--Soft-red);
+}
+
+.toggle-nav {
+    display: none;
+    grid-column: 2 / 3;
+    z-index: 1000;
 }
 
 main {
@@ -113,11 +134,13 @@ main {
 }
 
 .title {
-    font-size: 3.2rem;
+    color: var(--Very-dark-blue);
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 3.2rem);
+    /* font-size: 3.2rem; */
     font-weight: 800;
 }
 
-button {
+.main-content button {
     letter-spacing: 4px;
     text-transform: uppercase;
     justify-self: start;
@@ -128,6 +151,12 @@ button {
     margin-top: 2rem;
     color: var(--Grayish-blue);
     background-color: var(--Soft-red);
+    transition: background-color 250ms;
+}
+
+.main-content button:hover,
+.main-content button:focus {
+    background-color: var(--Very-dark-blue);
 }
 
 
@@ -164,6 +193,11 @@ button {
     font-size: 1.2rem;
     text-decoration: none;
     color: var(--Off-white);
+}
+
+.sub-heading a:hover,
+.sub-heading a:focus {
+    color: var(--Soft-orange);
 }
 
 .sidebar>div {
@@ -218,6 +252,11 @@ article {
     color: var(--Very-dark-blue);
 }
 
+.text-container a:hover,
+.text-container a:focus {
+    color: var(--Soft-red);
+}
+
 .text-container h3,
 .text-container p {
     margin-top: .5rem;
@@ -234,10 +273,45 @@ article {
 }
 
 
-
 /* ------------------------------------- */
 /* ----------- Media Queries ----------- */
 /* ------------------------------------- */
+
+
+@media (max-width:35rem) {
+    .navigation {
+        flex-direction: column;
+        gap: 2rem;
+        background-color: var(--Off-white);
+        padding: min(20rem, 15vh) 2rem;
+
+        position: fixed;
+        inset: 0 0 0 30%;
+        transform: translateX(100%);
+        transition: transform 300ms ease;
+    }
+
+    .toggle-nav {
+        display: block;
+        width: 1.3rem;
+        aspect-ratio: 1;
+        justify-self: end;
+        margin-right: 1rem;
+        background-color: transparent;
+        background-image: url(./assets/images/icon-menu.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-color: transparent;
+    }
+
+    .navigation[aria-expanded="true"] {
+        transform: translateX(0%);
+    }
+    .toggle-nav[aria-expanded="true"] {
+        background-image: url(./assets/images/icon-menu-close.svg);
+    }
+}
+
 
 @media (min-width: 35rem) and (max-width:64.99rem) {
     body {
