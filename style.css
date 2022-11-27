@@ -313,6 +313,10 @@ article {
     .toggle-nav[aria-expanded="true"] {
         background-image: url(./assets/images/icon-menu-close.svg);
     }
+
+    article {
+        grid-auto-rows: auto;
+    }
 }
 
 @media (min-width: 35rem) and (max-width:64.99rem) {
@@ -351,7 +355,6 @@ article {
     .navigation {
         grid-column: 3 / 5;
     }
-
 
     main {
         /* 0 or auto */
