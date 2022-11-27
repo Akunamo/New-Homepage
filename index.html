@@ -4,36 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
     <title>Frontend Mentor | News homepage</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <header>
         <nav>
-            <ul>
-                <li>items</li>
-                <li>items</li>
-                <li>items</li>
-                <li>items</li>
-                <li>items</li>
+            <img class="logo" src="./assets/images/logo.svg" alt="">
+            <button class="toggle-nav" aria-controls="navigation" aria-expanded="false"></button>
+            <ul class="navigation" id="navigation" aria-expanded="false">
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
             </ul>
         </nav>
     </header>
@@ -43,68 +31,72 @@
                 <source media="(min-width: 400px)" srcset="./assets/images/image-web-3-desktop.jpg">
                 <img src="./assets/images/image-web-3-mobile.jpg" alt="puzzle game">
             </picture>
-            <div class="title">
-                <h1>Main Heading</h1>
-            </div>
-            <div class="paragraph">
-                <p>paragraph</p>
-            </div>
-            <div class="button">button</div>
+            <h1 class="title">The Bright Future of Web 3.0?</h1>
+            <p>
+                We dive into the next evolution of the web that claims to put the power of the platforms back into the
+                hands of the people. But is it really fulfilling its promise?
+            </p>
+            <button>Read More</button>
         </section>
-        <aside>
+
+        <aside class="sidebar">
+            <h2 class="main-heading">New</h2>
+
             <div>
-                content
-                <h3></h3>
-                <p></p>
+                <h3 class="sub-heading"><a href="#">Hydrogen VS Electric Cars</a></h3>
+                <p>WIll hydrofen-fueled cars ever catch up to EVs?</p>
             </div>
+
             <div>
-                content
-                <h3></h3>
-                <p></p>
+                <h3 class="sub-heading"><a href="#">The Downside of AI Artistry</a></h3>
+                <p>What are the possible adverse effects of on-demand AI image generation?</p>
             </div>
+
             <div>
-                content
-                <h3></h3>
-                <p></p>
+                <h3 class="sub-heading"><a href="#">Is VC Funding Drying Up?</a></h3>
+                <p>Private funding by VC firms is down 50% YOY. We took a look at what that means.</p>
             </div>
         </aside>
-        <article class="one">
-            <div class="img-container">
-                <img src="./assets/images/image-retro-pcs.jpg" alt="retro pc">
-            </div>
-            <h3>article</h3>
-            <p></p>
-        </article>
-        <article class="two">
-            <div class="img-container">
-                <img src="./assets/images/image-top-laptops.jpg" alt="keyboard">
-            </div>
-            <h3>article</h3>
-            <p></p>
-        </article>
-        <article class="three">
-            <div class="img-container">
-                <img src="./assets/images/image-gaming-growth.jpg" alt="game controler">
-            </div>
-            <h3>article</h3>
-            <p></p>
-        </article>
+
+        <section class="articles">
+
+            <article>
+                <div class="img-container">
+                    <img src="./assets/images/image-retro-pcs.jpg" alt="retro pc">
+                </div>
+                <div class="text-container">
+                    <span aria-hidden="true">01</span>
+                    <h3><a href="#">Reviving Retro PCs</a></h3>
+                    <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </article>
+
+
+            <article>
+                <div class="img-container">
+                    <img src="./assets/images/image-top-laptops.jpg" alt="keyboard">
+                </div>
+                <div class="text-container">
+                    <span aria-hidden="true">02</span>
+                    <h3><a href="#">Top 10 Laptops of 2022</a></h3>
+                    <p>Our best picks for various needs and budgets.</p>
+                </div>
+            </article>
+
+
+            <article>
+                <div class="img-container">
+                    <img src="./assets/images/image-gaming-growth.jpg" alt="game controler">
+                </div>
+                <div class="text-container">
+                    <span aria-hidden="true">03</span>
+                    <h3><a href="#">The Growth of Gaming</a></h3>
+                    <p>How the pandemic has sparked fresh opportunities</p>
+                </div>
+            </article>
+
+        </section>
     </main>
-    <!-- Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New  -->
-
 </body>
 
 </html>
