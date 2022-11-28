@@ -62,6 +62,22 @@ p {
 
 
 /* ------------------------------ */
+/* -------    Utilities    ------ */
+/* ------------------------------ */
+
+.text-dark-blue {
+    color: var(--Dark-grayish-blue);
+}
+
+.text-gray {
+    color: var(--Grayish-blue);
+}
+
+.reset-link {
+    text-decoration: none;
+    color: inherit;
+}
+/* ------------------------------ */
 /* ------    Page Styles   ------ */
 /* ------------------------------ */
 
@@ -129,14 +145,10 @@ main {
     margin-top: 1rem;
 }
 
-.main-content p {
-    color: var(--Dark-grayish-blue);
-}
 
 .title {
     color: var(--Very-dark-blue);
     font-size: clamp(2rem, 1.5rem + 2.5vw, 3.2rem);
-    /* font-size: 3.2rem; */
     font-weight: 800;
 }
 
