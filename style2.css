@@ -141,8 +141,8 @@ button:focus {
 
 .articles > * {
     display: grid;
-    grid-template-columns: 30% 70%;
-    justify-content: center;
+    grid-template-columns: 3fr 11fr;
+    align-items: center;
     margin-inline: auto;
 }
 
@@ -157,9 +157,18 @@ button:focus {
         text-align: center;
     }
                                                 /* EXPERIMENTO DE GRID */
+
+    /* EXPERIMENTO NUMBER 1.0 */
     .articles   {
         /* justify-self: center; */
     }
+
+    /* EXPERIMENTO NUMBER 2.0 */
+    .articles > *  {
+        grid-template-columns: 1fr 30% 70%  1fr;
+        justify-content: center;
+    }
+
     .articles > *  {
         grid-template-columns: 1fr 30% 70%  1fr;
         justify-content: center;
@@ -193,5 +202,9 @@ button:focus {
     
     .main-content button {
         grid-column: 2;
+    }
+
+    .articles {
+        
     }
 }
