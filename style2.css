@@ -159,24 +159,31 @@ button:focus {
                                                 /* EXPERIMENTO DE GRID */
 
     /* EXPERIMENTO NUMBER 1.0 */
+    /* RESULT = SUCCESS */
     .articles   {
         /* justify-self: center; */
     }
 
     /* EXPERIMENTO NUMBER 2.0 */
+    /* RESULT = FAILED */
     .articles > *  {
-        grid-template-columns: 1fr 30% 70%  1fr;
-        justify-content: center;
+        /* grid-template-columns: 1fr 30% 70%  1fr;
+        justify-content: center; */
     }
 
-    .articles > *  {
-        grid-template-columns: 1fr 30% 70%  1fr;
+    /* EXPERIMENTO NUMBER 2.2 */
+    /* RESULT = NOT-FULLY-SUCCESSFULL*/
+    /* .articles > *  {
+        grid-template-columns: 20% 60%;
         justify-content: center;
-    }
+    } */
 
-    .articles > * > :first-child {
-        grid-column: 2;
-    }
+    /* EXPERIMENTO NUMBER 3 */
+    /* RESULT = FAILED */
+    /* .articles > * {
+        margin-inline: auto;
+    } */
+
 }
 
 @media (min-width:65rem) {
