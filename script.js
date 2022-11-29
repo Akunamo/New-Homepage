@@ -1,9 +1,6 @@
 const navigation = document.getElementById('navigation');
 const navToggleBtn = document.querySelector('.nav-toggle')
 
-
-
-
 navToggleBtn.addEventListener('click', toggleNavigation)
 
 function toggleNavigation() {

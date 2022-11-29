@@ -155,6 +155,7 @@ main {
     justify-self: start;
     align-self: end;
     text-transform: uppercase;
+    letter-spacing: 4px;
     border: transparent;
     padding: 1rem 2rem;
     background-color: var(--Soft-red);
@@ -242,6 +243,10 @@ main {
 @media (min-width:35rem) and (max-width:65rem) {
     body {
         text-align: center;
+    }
+
+    .main-content button {
+        justify-self:center
     }
 
     .articles {
