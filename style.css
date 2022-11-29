@@ -243,7 +243,11 @@ main {
     body {
         text-align: center;
     }
-
+    
+    .main-content button {
+        justify-self: center;
+    }
+    
     .articles {
         justify-self: center;
     }
