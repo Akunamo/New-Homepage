@@ -1,5 +1,5 @@
 const navigation = document.getElementById('navigation');
-const navToggleBtn = document.querySelector('.toggle-nav')
+const navToggleBtn = document.querySelector('.nav-toggle')
 
 
 
